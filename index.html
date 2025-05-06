@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="SoccerAgent">
+  <meta property="og:title" content="Towards Universal Soccer Video Understanding"/>
+  <meta property="og:description" content="Multi-Agent System for Comprehensive Soccer Understanding"/>
+  <meta property="og:url" content="https://jyrao.github.io/SoccerAgent/"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="/Users/jiayuanrao/Dwork/AI4Sports/MatchRAG/webpage/static/images/overview.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>SoccerAgent</title>
+  <link rel="icon" type="image/x-icon" href="./static/images/socceragent.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <!-- <h1 class="title is-1 publication-title" style="margin-bottom: 30px;">Multi-Agent System for Comprehensive Soccer Understanding</h1> -->
+            <h1 class="title is-2 publication-title" style="margin-bottom: 36px; word-wrap: break-word;">
+              Multi-Agent System for Comprehensive Soccer Understanding
+            </h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://jyrao.github.io/" target="_blank">Jiayuan Rao</a><sup>1*</sup>, </span>
+                <span class="author-block">
+                <a href="https://openreview.net/profile?id=~Zifeng_Li3" target="_blank">Zifeng Li</a><sup>1*</sup>, </span>
+                <span class="author-block">
+                <a href="https://haoningwu3639.github.io/" target="_blank">Haoning Wu</a><sup>1</sup>, </span>
+                <span class="author-block">
+                <a href="https://mediabrain.sjtu.edu.cn/yazhang/" target="_blank">Ya Zhang</a><sup>1</sup>, </span>
+                <span class="author-block">
+                <a href="https://cmic.sjtu.edu.cn/wangyanfeng/" target="_blank">Yanfeng Wang</a><sup>1 <i class="far fa-envelope"></i></sup>, </span>
+                <span class="author-block">
+                <a href="https://weidixie.github.io" target="_blank">Weidi Xie</a><sup>1 <i class="far fa-envelope"></i></sup></span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors" style="margin-bottom: 10px; margin-top: 20px;">
+                    <span class="author-block"><sup>1</sup>School of Artifitial Intelligence, Shanghai Jiao Tong University, China</span><br>
+                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
+                  </div>
+
+                  <div class="title is-2 has-text-centered has-text-weight-bold" style="margin-top: 20px; font-size: 2rem;">Technical Report</div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper(Soon)</span>
+                      </a>
+                    </span>
+
+                    <!-- Supplementary PDF link -->
+                    <!-- <span class="link-block">
+                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span> -->
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/jyrao/SoccerAgent" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                  <!-- HuggingFace Dataset link -->
+                  <span class="link-block">
+                    <a href="https://huggingface.co" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                            🤗
+                        </span>
+                        <span>Dataset(Soon)</span>
+                    </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv(Soon)</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+      <!-- 图片部分 -->
+      <div style="width: 80%;">
+        <img src="./static/images/overview.png" alt="Teaser" style="width: 100%; height: auto; object-fit: contain;">
+      </div>
+      <!-- 文本部分 -->
+      <div style="width: 95%;  margin-top: 20px;  margin-bottom: 80px;">
+        <h2 class="subtitle" style="font-size: 16px; line-height: 1.5; text-align: justify;">
+          <figcaption>
+            <strong><i>Overview.</i></strong> (a) A user example of our multi-agent system, SoccerAgent, 
+            on the proposed diverse and challenging SoccerBench; (b) An example of the reasoning chain and workflow of SoccerAgent.
+          </figcaption>
+        </h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 分隔线部分 -->
+<div style="width: 100%; text-align: center; margin-top: 20px;">
+  <div style="height: 2px; background: linear-gradient(to right, #d3d3d3 0%, #808080 50%, #d3d3d3 100%); width: 50%; margin-left: auto; margin-right: auto;"></div>
+</div>
+
+<section class="section hero">
+  <div class="container is-max-desktop" style="width: 90%; max-width: 1200px;">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified" style="line-height: 1.8; margin-bottom: -40px;">
+          <p>
+            Recent advancements in AI-driven soccer understanding have demonstrated rapid progress, yet existing research predominantly focuses on isolated or narrow tasks. To bridge this gap, we propose a comprehensive framework for holistic soccer understanding. Specifically, we make the following contributions in this paper: <em>(i)</em> we construct <strong>SoccerWiki</strong>, the first large-scale multimodal soccer knowledge base, integrating rich domain knowledge about players, teams, referees, and venues to enable knowledge-driven reasoning; <em>(ii)</em> we present <strong>SoccerBench</strong>, the largest and most comprehensive soccer-specific benchmark, featuring around 10K standardized multimodal~(text, image, video) multi-choice QA pairs across 13 distinct understanding tasks, curated through automated pipelines and manual verification; <em>(iii)</em> we introduce <strong>SoccerAgent</strong>, a novel multi-agent system that decomposes complex soccer questions via collaborative reasoning, 
+            leveraging domain expertise from SoccerWiki and achieving robust performance; (iv) extensive evaluations and ablations that benchmark state-of-the-art MLLMs on SoccerBench, highlighting the superiority of our proposed agentic system. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- End paper abstract -->
+
+<!-- 分隔线部分 -->
+<div style="width: 100%; text-align: center; margin-top: 40px; margin-bottom: 40px;">
+  <div style="height: 2px; background: linear-gradient(to right, #d3d3d3 0%, #808080 50%, #d3d3d3 100%); width: 50%; margin-left: auto; margin-right: auto;"></div>
+</div>
+
+<!-- Vertical Image Display -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class="vertical-image-display">
+        <div class="columns is-centered has-text-centered" style="margin-bottom: 40px;"><h2 class="title is-3">Benchmark</h2></div>
+        <div class="image-item">
+          <img src="./static/images/benchmark.png" alt="Benchmark"/>
+          <h2 class="subtitle" style="margin-top: 20px;">
+            <figcaption>
+              <strong>Proposed Benchmark Overview.</strong> SoccerBench QA Generation Pipeline. We construct multi-choice QA samples based on SoccerWiki and other existing datasets Some representative examples for each task are presented for reference.
+          </figcaption>
+          </h2>
+        </div>
+        <div style="width: 100%; text-align: center; margin-top: 40px; margin-bottom: 40px;">
+          <div style="height: 2px; background: linear-gradient(to right, #d3d3d3 0%, #808080 50%, #d3d3d3 100%); width: 80%; margin-left: auto; margin-right: auto;"></div>
+        </div>
+        <div class="columns is-centered has-text-centered"><h2 class="title is-3">Method</h2></div>
+        <div class="image-item">
+          <img src="./static/images/agent.png" alt="Architecture"/>
+          <h2 class="subtitle">
+            <figcaption>
+              <strong>SoccerAgent Architecture Overview.</strong> We design a multi-agent system to decompose and solve the given multi-modal soccer-related questions step by step with a distributed toolbox.
+          </figcaption>
+          </h2>
+        </div>
+        <!-- 分隔线部分 -->
+        <div style="width: 100%; text-align: center; margin-top: 40px; margin-bottom: 40px;">
+          <div style="height: 2px; background: linear-gradient(to right, #d3d3d3 0%, #808080 50%, #d3d3d3 100%); width: 80%; margin-left: auto; margin-right: auto;"></div>
+        </div>
+        <div class="columns is-centered has-text-centered"><h2 class="title is-3">Results</h2></div>
+        <div class="image-item">
+          <img src="./static/images/quantitative.png" alt="Results1" style="width: 80%; height: auto;"/>
+          <h2 class="subtitle" style="width: 80%; margin-left: auto; margin-right: auto;">
+            <figcaption>
+              <strong>Quantitative Comparisons on SoccerBench.</strong> Here, * indicates that we use a Commercial API (GPT-4o) as a tool in the recommend tool chain to solve the corresponding task.</span>.
+          </figcaption>
+          </h2>
+        </div>
+        <div class="image-item">
+          <img src="./static/images/ablation.png" alt="Results2" style="width: 80%; height: auto;"/>
+          <h2 class="subtitle" style="width: 80%; margin-left: auto; margin-right: auto;">
+            <figcaption>
+              <strong>Ablations on SoccerAgent.</strong> Here, gray background indicates the default configuration of SoccerAgent, while TD and EX denote Task descriptions and Execution Examples, respectively.
+          </figcaption>
+          </h2>
+        </div>
+        <!-- 分隔线部分 -->
+        <div style="width: 100%; text-align: center; margin-top: 40px; margin-bottom: 40px;">
+          <div style="height: 2px; background: linear-gradient(to right, #d3d3d3 0%, #808080 50%, #d3d3d3 100%); width: 80%; margin-left: auto; margin-right: auto;"></div>
+        </div>
+        <div class="columns is-centered has-text-centered"><h2 class="title is-3">Qualitative Results</h2></div>
+        <div class="image-item">
+          <img src="./static/images/qualitative.png" alt="Results3"/>
+          <h2 class="subtitle" style="width: 80%; margin-left: auto; margin-right: auto;">
+            <figcaption>
+              <strong>Qualitative Results.</strong> Here, we demonstrate several representative examples showing the entire process of tool planning and tool execution of different soccer understanding tasks.
+          </figcaption>
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Vertical Image Display -->
+
+<style>
+/* 确保标题在屏幕宽度足够时不换行 */
+.publication-title {
+  white-space: nowrap; /* 防止自动换行 */
+  overflow: hidden; /* 如果超出显示区域，隐藏多余文本 */
+  text-overflow: ellipsis; /* 超过部分用省略号表示 */
+  width: 100%; /* 让标题尽可能占满整个宽度 */
+}
+
+/* 当屏幕尺寸小于某个阈值时，允许换行 */
+@media (max-width: 864px) {
+  .publication-title {
+    white-space: normal; /* 允许换行 */
+  }
+}
+
+/* 设置 subtitle 部分和图像的宽度 */
+.subtitle, .vertical-image-display .image-item img {
+  width: 80%; /* 让 subtitle 和图像的宽度稍微窄一点 */
+  display: block;
+  margin-left: auto; /* 居中 */
+  margin-right: auto; /* 居中 */
+  text-align: justify; /* 确保文本对齐 */
+  box-sizing: border-box; /* 让宽度包括 padding */
+}
+
+
+/* 针对 figcaption 文本部分的样式 */
+figcaption {
+  font-size: 16px; 
+  line-height: 1.5;
+  text-align: justify; /* 保证文字对齐 */
+  margin-top: 10px; /* 给 figcaption 添加上边距 */
+}
+
+/* 为图片和 figcaption 增加间距，保证图文之间不挤在一起 */
+.vertical-image-display .image-item {
+  margin-bottom: 40px; /* 增加项目之间的间距 */
+}
+
+/* 为 hero 部分添加适当的内边距 */
+.hero.is-small {
+  margin-bottom: -5rem; 
+  padding-bottom: 0;
+}
+
+/* 确保图像部分不被拉伸，并且保持原有比例 */
+.vertical-image-display img {
+  height: auto; /* 保持图片的纵横比 */
+  object-fit: contain; /* 确保图像不被拉伸 */
+}
+</style>
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>
+        @misc{rao2025socceragent,
+          title   = {Multi-Agent System for Comprehensive Soccer Understanding},
+          author  = {Rao, Jiayuan and Li, Zifeng and Wu, Haoning and Zhang, Ya and Wang, Yanfeng and Xie, Weidi},
+          journal = {arXiv preprint arXiv:2505.xxxxxxxx},
+          year    = {2025},
+        }
+      </code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
