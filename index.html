@@ -84,12 +84,12 @@
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org" target="_blank"
+                        <a href="https://arxiv.org/pdf/2505.03735" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
                         </span>
-                        <span>Paper(Soon)</span>
+                        <span>Paper</span>
                       </a>
                     </span>
 
@@ -128,12 +128,12 @@
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org" target="_blank"
+                  <a href="https://arxiv.org/abs/2505.03735" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
                   </span>
-                  <span>arXiv(Soon)</span>
+                  <span>arXiv</span>
                 </a>
               </span>
             </div>
@@ -149,10 +149,10 @@
     <div class="container" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
       <!-- 图片部分 -->
       <div style="width: 80%;">
-        <img src="./static/images/overview.png" alt="Teaser" style="width: 100%; height: auto; object-fit: contain;">
+        <img src="./static/images/overview.png" alt="Teaser" style="width: 80%; height: auto; object-fit: contain;">
       </div>
       <!-- 文本部分 -->
-      <div style="width: 95%;  margin-top: 20px;  margin-bottom: 80px;">
+      <div style="width: 85%;  margin-top: 20px;  margin-bottom: 80px;">
         <h2 class="subtitle" style="font-size: 16px; line-height: 1.5; text-align: justify;">
           <figcaption>
             <strong><i>Overview.</i></strong> (a) A user example of our multi-agent system, SoccerAgent, 
@@ -176,8 +176,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified" style="line-height: 1.8; margin-bottom: -40px;">
           <p>
-            Recent advancements in AI-driven soccer understanding have demonstrated rapid progress, yet existing research predominantly focuses on isolated or narrow tasks. To bridge this gap, we propose a comprehensive framework for holistic soccer understanding. Specifically, we make the following contributions in this paper: <em>(i)</em> we construct <strong>SoccerWiki</strong>, the first large-scale multimodal soccer knowledge base, integrating rich domain knowledge about players, teams, referees, and venues to enable knowledge-driven reasoning; <em>(ii)</em> we present <strong>SoccerBench</strong>, the largest and most comprehensive soccer-specific benchmark, featuring around 10K standardized multimodal~(text, image, video) multi-choice QA pairs across 13 distinct understanding tasks, curated through automated pipelines and manual verification; <em>(iii)</em> we introduce <strong>SoccerAgent</strong>, a novel multi-agent system that decomposes complex soccer questions via collaborative reasoning, 
-            leveraging domain expertise from SoccerWiki and achieving robust performance; (iv) extensive evaluations and ablations that benchmark state-of-the-art MLLMs on SoccerBench, highlighting the superiority of our proposed agentic system. 
+            Recent advancements in AI-driven soccer understanding have demonstrated rapid progress, yet existing research predominantly focuses on isolated or narrow tasks. To bridge this gap, we propose a comprehensive framework for holistic soccer understanding. Specifically, we make the following contributions in this paper: <em>(i)</em> we construct <strong>SoccerWiki</strong>, the first large-scale multimodal soccer knowledge base, integrating rich domain knowledge about players, teams, referees, and venues to enable knowledge-driven reasoning; <em>(ii)</em> we present <strong>SoccerBench</strong>, the largest and most comprehensive soccer-specific benchmark, featuring around 10K standardized multimodal~(text, image, video) multi-choice QA pairs across 13 distinct understanding tasks, curated through automated pipelines and manual verification; <em>(iii)</em> we introduce <strong>SoccerAgent</strong>, a novel multi-agent system that decomposes complex soccer questions via collaborative reasoning, leveraging domain expertise from SoccerWiki and achieving robust performance; <em>(iv)</em> extensive evaluations and ablations that benchmark state-of-the-art MLLMs on SoccerBench, highlighting the superiority of our proposed agentic system. 
           </p>
         </div>
       </div>
@@ -199,20 +198,20 @@
       <div class="vertical-image-display">
         <div class="columns is-centered has-text-centered" style="margin-bottom: 40px;"><h2 class="title is-3">Benchmark</h2></div>
         <div class="image-item">
-          <img src="./static/images/benchmark.png" alt="Benchmark"/>
-          <h2 class="subtitle" style="margin-top: 20px;">
+          <img src="./static/images/benchmark.png" alt="Benchmark" style="width: 60%"/>
+          <h2 class="subtitle" style="width: 70% ;margin-top: 20px;">
             <figcaption>
               <strong>Proposed Benchmark Overview.</strong> SoccerBench QA Generation Pipeline. We construct multi-choice QA samples based on SoccerWiki and other existing datasets Some representative examples for each task are presented for reference.
           </figcaption>
           </h2>
         </div>
-        <div style="width: 100%; text-align: center; margin-top: 40px; margin-bottom: 40px;">
+        <div style="width: 80%; text-align: center; margin-top: 40px; margin-bottom: 40px;">
           <div style="height: 2px; background: linear-gradient(to right, #d3d3d3 0%, #808080 50%, #d3d3d3 100%); width: 80%; margin-left: auto; margin-right: auto;"></div>
         </div>
         <div class="columns is-centered has-text-centered"><h2 class="title is-3">Method</h2></div>
         <div class="image-item">
-          <img src="./static/images/agent.png" alt="Architecture"/>
-          <h2 class="subtitle">
+          <img src="./static/images/agent.png" alt="Architecture"  style="width: 60%"/>
+          <h2 class="subtitle" style="width: 70%;">
             <figcaption>
               <strong>SoccerAgent Architecture Overview.</strong> We design a multi-agent system to decompose and solve the given multi-modal soccer-related questions step by step with a distributed toolbox.
           </figcaption>
@@ -224,16 +223,16 @@
         </div>
         <div class="columns is-centered has-text-centered"><h2 class="title is-3">Results</h2></div>
         <div class="image-item">
-          <img src="./static/images/quantitative.png" alt="Results1" style="width: 80%; height: auto;"/>
-          <h2 class="subtitle" style="width: 80%; margin-left: auto; margin-right: auto;">
+          <img src="./static/images/quantitative.png" alt="Results1" style="width: 60%; height: auto;"/>
+          <h2 class="subtitle" style="width: 65%; margin-left: auto; margin-right: auto;">
             <figcaption>
               <strong>Quantitative Comparisons on SoccerBench.</strong> Here, * indicates that we use a Commercial API (GPT-4o) as a tool in the recommend tool chain to solve the corresponding task.</span>.
           </figcaption>
           </h2>
         </div>
         <div class="image-item">
-          <img src="./static/images/ablation.png" alt="Results2" style="width: 80%; height: auto;"/>
-          <h2 class="subtitle" style="width: 80%; margin-left: auto; margin-right: auto;">
+          <img src="./static/images/ablation.png" alt="Results2" style="width: 60%; height: auto;"/>
+          <h2 class="subtitle" style="width: 65%; margin-left: auto; margin-right: auto;">
             <figcaption>
               <strong>Ablations on SoccerAgent.</strong> Here, gray background indicates the default configuration of SoccerAgent, while TD and EX denote Task descriptions and Execution Examples, respectively.
           </figcaption>
@@ -245,8 +244,8 @@
         </div>
         <div class="columns is-centered has-text-centered"><h2 class="title is-3">Qualitative Results</h2></div>
         <div class="image-item">
-          <img src="./static/images/qualitative.png" alt="Results3"/>
-          <h2 class="subtitle" style="width: 80%; margin-left: auto; margin-right: auto;">
+          <img src="./static/images/qualitative.png" alt="Results3" style="width: 70%;"/>
+          <h2 class="subtitle" style="width: 70%; margin-left: auto; margin-right: auto;">
             <figcaption>
               <strong>Qualitative Results.</strong> Here, we demonstrate several representative examples showing the entire process of tool planning and tool execution of different soccer understanding tasks.
           </figcaption>
@@ -320,7 +319,7 @@ figcaption {
         @misc{rao2025socceragent,
           title   = {Multi-Agent System for Comprehensive Soccer Understanding},
           author  = {Rao, Jiayuan and Li, Zifeng and Wu, Haoning and Zhang, Ya and Wang, Yanfeng and Xie, Weidi},
-          journal = {arXiv preprint arXiv:2505.xxxxxxxx},
+          journal = {arXiv preprint arXiv:2505.03735},
           year    = {2025},
         }
       </code></pre>
