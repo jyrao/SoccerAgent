@@ -21,16 +21,16 @@ To be updated......
 ## Citation
 If you use this code and data for your research or project, please cite (to be updated...):
 
-	@InProceedings{rao2025socceragent,
-            title   = {Multi-Agent System for Comprehensive Soccer Understanding},
-            author  = {Rao, Jiayuan and Li, Zifeng and Wu, Haoning and Zhang, Ya and Wang, Yanfeng and Xie, Weidi},
-            journal = {arXiv preprint arXiv:2505.03735},
-            year    = {2025},
+	@article{rao2025socceragent,
+            title={Multi-Agent System for Comprehensive Soccer Understanding},
+            author={Rao, Jiayuan and Li, Zifeng and Wu, Haoning and Zhang, Ya and Wang, Yanfeng and Xie, Weidi},
+            journal={arXiv preprint arXiv:2505.03735},
+            year={2025}
       }
 
 ## TODO
 - [x] Release Paper
-- [ ] Release Benchmark
+- [x] Release Benchmark
 - [ ] Release Agent Codes
 
 ## Contact
