@@ -1,5 +1,7 @@
 # SoccerAgent
-This repository contains the official introduction and codes implementation for paper **"Multi-Agent System for Comprehensive Soccer Understanding"**.
+This repository contains the official introduction and codes implementation for paper **"Multi-Agent System for Comprehensive Soccer Understanding"** in [ACM Multimidia 2025](https://acmmm2025.org/).
+
+Hopefully, the codes will be released in July.
 
 [Paper](https://arxiv.org/abs/2505.03735) ⋅ [WebPage](https://jyrao.github.io/SoccerAgent) ⋅ [Dataset(Soon)](https://huggingface.co/)
 
