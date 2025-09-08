@@ -5,11 +5,11 @@ This repository contains the official introduction and codes implementation for 
 
 ## News
 <!-- [2025.10] SoccerNet Challenge 2026 is about to be launched. -->
-[2025.09] The official implementation codes are released.
-[2025.09] We released our soccer database **SoccerWiki**.
-[2025.07] SoccerAgent is accepted by ACM MM 2025, see you in Dublin.🎉
-[2025.06] Our benchmark of comprehensive soccer QA **SoccerBench** is released on Huggingface.
-[2025.05] Our pre-preint paper is released on arXiv.
+- [2025.09] The official implementation codes are released.
+- [2025.09] We released our soccer database **SoccerWiki**.
+- [2025.07] SoccerAgent is accepted by ACM MM 2025, see you in Dublin.🎉
+- [2025.06] Our benchmark of comprehensive soccer QA **SoccerBench** is released on Huggingface.
+- [2025.05] Our pre-preint paper is released on arXiv.
 
 ## Requirements
 To install the required dependencies for the project, simply run the following command:
@@ -146,11 +146,11 @@ We proposed a benchmark of comprehensive soccer understanding, which is the larg
 ## Citation
 If you use this code and data for your research or project, please cite (to be updated...):
 
-	@article{rao2025socceragent,
-            title={Multi-Agent System for Comprehensive Soccer Understanding},
-            author={Rao, Jiayuan and Li, Zifeng and Wu, Haoning and Zhang, Ya and Wang, Yanfeng and Xie, Weidi},
-            journal={arXiv preprint arXiv:2505.03735},
-            year={2025}
+      @inproceedings{rao2025soccceragent,
+      title = {Multi-Agent System for Comprehensive Soccer Understanding},
+      author = {Rao, Jiayuan and Li, Zifeng and Wu, Haoning and Zhang, Ya and Wang, Yanfeng and Xie, Weidi},
+      booktitle = {ACM Multimedia 2025},
+      year = {2025}
       }
 
 ## TODO
