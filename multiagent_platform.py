@@ -240,9 +240,6 @@ The following is all our execution history, now you can start with your call of 
 
 
 def parse_call_response(model_reply):
-    """
-    解析 model_reply 中的 <Call> 部分，提取 <Tool>, <Query>, <Material> 的内容。
-    """
     tool = re.search(r'<Tool>(.*?)</Tool>', model_reply, re.DOTALL)
     query = re.search(r'<Query>(.*?)</Query>', model_reply, re.DOTALL)
     material = re.search(r'<Material>(.*?)</Material>', model_reply, re.DOTALL)
@@ -254,9 +251,6 @@ def parse_call_response(model_reply):
     return tool.group(1).strip(), query.group(1).strip(), material.group(1).strip()
 
 def execute_tool_call(tool_name, query, material, toolbox_functions):
-    """
-    根据 tool_name 从 toolbox_functions 中找到对应的函数并执行。
-    """
     if tool_name not in toolbox_functions:
         # raise ValueError(f"Tool '{tool_name}' not found in toolbox_functions")
         print(f"Tool '{tool_name}' not found in toolbox_functions")
@@ -270,9 +264,6 @@ def execute_tool_call(tool_name, query, material, toolbox_functions):
     return f"<StepResult>\n    <Answer>{execution_retults}</Answer>\n</StepResult>"
 
 def generate_LLM_prompt(query):
-    """
-    生成调用 LLM 做问题回答的 prompt。
-    """
     prompt = f"""According to the total process of above conversation, now give me your answer to the question '{query}'. You should retrun me with the following form:
     
 Answer: [Your answer here]
@@ -284,7 +275,7 @@ Please make sure that your answer is consistent with the total process of the ex
 
 
 
-def execute_tool_chain(input_text, toolbox_functions, Instruction="You are a helpful multi-agent assistant that can answer questions about soccer.", api_key="sk-qsB0dn28i0QhQw58099e30554bA94b3dBc96D0287bEaC563"):
+def execute_tool_chain(input_text, toolbox_functions, Instruction="You are a helpful multi-agent assistant that can answer questions about soccer.", api_key="your-deepseek-api-key"):
     client = OpenAI(api_key=api_key, base_url="https://az.gptplus5.com/v1")
     # Initialize the conversation history with the system instruction and user input
     conversation_history = [
