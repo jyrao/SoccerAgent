@@ -34,7 +34,7 @@ toolbox_functions = {
     "Shot Change": SHOT_CHANGE,
     "Action Classifier": ACTION_CLASSIFICATION,
     "Commentary Generation": COMMENTARY_GENERATION,
-    "Jersey Color Relevent VQA": JERSEY_COLOR_VLM,
+    "Jersey Color Relevant VQA": JERSEY_COLOR_VLM,
     "Vision Language Model": VLM,
     "Replay Grounding": REPLAY_GROUNDING,
     "Score and Time Recognition": SCORE_TIME_DETECTION,
