@@ -154,7 +154,7 @@ def parse_input(input_str):
     
     return (known_info, tool_chain)
 
-def generate_prompt_execution(query, material, response, toolbox):
+def generate_prompt_execution(query, material, response, toolbox, options):
     prompt_execution = f"""As a multi-agent core in the Soccer Question Answering Assistant, you are required to execute the following tool chain to answer the question:
 
 "{query}"
@@ -162,6 +162,10 @@ def generate_prompt_execution(query, material, response, toolbox):
 with the following additional material:
 
 {material}
+
+There are several options:
+
+{options}
 
 with the known info as:
 
@@ -402,9 +406,8 @@ Tool Chain: [*Vision Language Model* -> *Entity Recognition* -> *Text Retrieval 
 5. Connect tools using -> symbol
 6. Try your best to decompose the question and identify the required tools, you can first reference the common QA tasks to get some ideas. If the template fits the question, you can directly use the recommended tool chain. If not, you can try to decompose the question and identify the required tools.
 """
-
-def EXECUTE_TOOL_CHAIN(query, material):
+def EXECUTE_TOOL_CHAIN(query, material, options):
     prompt = generate_prompt(TaskDecompositionPrompt, query, material)
     res = workflow(input_text=prompt, Instruction="You are an expert in soccer.")
-    result = execute_tool_chain(generate_prompt_execution(query, material, res, toolbox_descriptions), toolbox_functions)
+    result = execute_tool_chain(generate_prompt_execution(query, material, res, toolbox_descriptions, options), toolbox_functions)
     return result
