@@ -112,7 +112,7 @@ def csv_to_task_string(csv_path=os.path.join(PROJECT_PATH, "pipeline/tasks.csv")
 def generate_prompt(taskdecompositionprompt, query, additional_material):
     prompt = taskdecompositionprompt
     prompt += f"\nQuery: {query}\n"
-    prompt += f"Adittional Material: {additional_material}\n"
+    prompt += f"Addittional Material: {additional_material}\n"
     return prompt
 
 def workflow(input_text, Instruction, follow_up_prompt=None, api_key="your-deepseek-api-key", max_tokens_followup=1500):
@@ -369,21 +369,21 @@ For each query, you should respond ONLY with:
 ## Examples
 
 Query 1: "How does the viewpoint of the camera shift in the video?"
-Adittional Material: "video": ["/remote-home/jiayuanrao/MatchRAG/test_QA/lzf/Q8/QA_material/video_once/england_epl/2014-2015/2015-02-21 - 18-00 Chelsea 1 - 1 Burnley/1_135.mkv"]
+Addittional Material: "video": ["/remote-home/jiayuanrao/MatchRAG/test_QA/lzf/Q8/QA_material/video_once/england_epl/2014-2015/2015-02-21 - 18-00 Chelsea 1 - 1 Burnley/1_135.mkv"]
 
 Your response:
 Known Info: [$VideoClip$]
 Tool Chain: [*Shot Change* -> *Crop Video* -> *Camera Detection* -> *LLM*]
 
 Query 2: "What was the final score of the game 2015-02-21 - 18-00 Chelsea vs Burnley?"
-Adittional Material: None
+Addittional Material: None
 
 Your response:
 Known Info: [$GameContext$]
 Tool Chain: [*Game Search* -> *Game info Retrieval* -> *Match History Retrieval* -> *LLM*]
 
 Query 3: "How many goals did the player who forced a corner score for Borussia Dortmund's senior team?"
-Adittional Material: "video": ["/remote-home/jiayuanrao/dataset/matchtime/video_clips/SN-Caption-test-align/germany_bundesliga_2015-2016/2015-11-08 - 17-30 Dortmund 3 - 2 Schalke/1_42_03.mp4"]
+Addittional Material: "video": ["/remote-home/jiayuanrao/dataset/matchtime/video_clips/SN-Caption-test-align/germany_bundesliga_2015-2016/2015-11-08 - 17-30 Dortmund 3 - 2 Schalke/1_42_03.mp4"]
 
 Your response:
 Known Info: [$VideoClip$, $GameContext$]
