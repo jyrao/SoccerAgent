@@ -1,10 +1,14 @@
 # SoccerAgent: Multi-Agent System for Comprehensive Soccer Understanding (ACM Multimedia 2025)
-This repository contains the official introduction and codes implementation for paper **"Multi-Agent System for Comprehensive Soccer Understanding"** in [ACM Multimidia 2025](https://acmmm2025.org/).
+This repository contains the official introduction and codes implementation for paper **"Multi-Agent System for Comprehensive Soccer Understanding"** in [ACM Multimidia 2025](https://acmmm2025.org/). Around this work, we are organizing [**SoccerNet Challenge 2026 - VQA**](https://www.soccer-net.org/challenges/2026) with **$1000** prize at CVPR 2026, the details are in [**Challenge Page**](https://github.com/jyrao/SoccerAgent/blob/main/Challenge.md).
 
-[Paper](https://arxiv.org/abs/2505.03735) ⋅ [WebPage](https://jyrao.github.io/SoccerAgent) ⋅ [Benchmark](https://huggingface.co/datasets/Homie0609/SoccerBench) ⋅ [Database](https://huggingface.co/datasets/Homie0609/SoccerWiki)
+
+More details could be found at:
+
+- 📑 Paper Relevant Links: [Paper](https://arxiv.org/abs/2505.03735) ⋅ [WebPage](https://jyrao.github.io/SoccerAgent) ⋅ [Benchmark](https://huggingface.co/datasets/Homie0609/SoccerBench) ⋅ [Database](https://huggingface.co/datasets/Homie0609/SoccerWiki) 
+- 🏆 2026 SoccerNet Challenge - VQA: [Benchmark (Test & Challenge)](https://huggingface.co/datasets/Homie0609/2026SoccerNetChallenge-VQA) ⋅ [Eval (Test)](https://www.codabench.org/competitions/11086/#/results-tab) ⋅ [Eval (Challenge)](https://www.codabench.org/competitions/11087/)
 
 ## News
-<!-- [2025.10] SoccerNet Challenge 2026 is about to be launched. -->
+- [2025.10] Our **SoccerNet Challenge 2026 - VQA** @CVPR 2026 is about to be launched.
 - [2025.09] The official implementation codes are released.
 - [2025.09] We released our soccer database **SoccerWiki**.
 - [2025.07] SoccerAgent is accepted by ACM MM 2025, see you in Dublin.🎉

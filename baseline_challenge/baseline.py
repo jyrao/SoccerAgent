@@ -1,7 +1,6 @@
 import os
 import argparse
 from model import QwenVL, GPT4o
-os.environ["CUDA_VISIBLE_DEVICES"] = "4,5,6,7"
 
 def main():
     # Setting up command-line arguments
@@ -31,4 +30,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

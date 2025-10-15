@@ -10,7 +10,7 @@ from qwen_vl_utils import process_vision_info
 import openai
 from openai import OpenAI
 from utils import encode_image, encode_video, extract_option, count_csv_rows, sort_files_by_number_in_name, compress_video, compress_image, videolist2imglist
-
+import random
 
 class BaselineModel:
     def __init__(self):
@@ -114,7 +114,7 @@ class QwenVL(BaselineModel):
         return output_text
     
     def test_qa(self, input_file, output_file, materials_folder):
-        with open(json_file, "r") as f:
+        with open(input_file, "r") as f:
             data = json.load(f)
         answers = []
         for item in tqdm(data):
@@ -132,21 +132,28 @@ class QwenVL(BaselineModel):
             
             old_material_path = item["materials"]
             material_path = []
-            for path in old_material_path:
-                material_path.append(os.path.join(materials_folder, path))
-
-            if material_path:
-                if not os.path.isfile(material_path[0]):
-                    material_path = sort_files_by_number_in_name(material_path[0])
-                image_exts = {'.jpg', '.jpeg', '.png', '.gif', '.bmp', '.webp', '.tiff', '.tif', '.heic'}
-                video_exts = {'.mp4', '.avi', '.mov', '.mkv', '.flv', '.wmv', '.webm', '.mpeg', '.mpg'}
-                if os.path.splitext(material_path[0])[1].lower() in image_exts:
-                    reply = self.chat_img(prompt, material_path)
-                elif os.path.splitext(material_path[0])[1].lower() in video_exts:
-                    reply = self.chat_video(prompt, material_path)
-            else:
-                reply = self.chat_img(prompt, [])
-            answer = extract_option(reply)
+            try:
+                if old_material_path:
+                    for path in old_material_path:
+                        material_path.append(os.path.join(materials_folder, path))
+                    if not os.path.isfile(material_path[0]):
+                        material_path = sort_files_by_number_in_name(material_path[0])
+                    image_exts = {'.jpg', '.jpeg', '.png', '.gif', '.bmp', '.webp', '.tiff', '.tif', '.heic'}
+                    video_exts = {'.mp4', '.avi', '.mov', '.mkv', '.flv', '.wmv', '.webm', '.mpeg', '.mpg'}
+                    if os.path.splitext(material_path[0])[1].lower() in image_exts:
+                        reply = self.chat_img(prompt, material_path)
+                    elif os.path.splitext(material_path[0])[1].lower() in video_exts:
+                        reply = self.chat_video(prompt, material_path)
+                else:
+                    reply = self.chat_img(prompt, [])
+                answer = extract_option(reply)
+            except Exception as e:
+                print(f"Error processing item id {id_num}: {e}")
+                answer = None
+            
+            # if the model does not return a valid option, randomly select one
+            if not answer:
+                answer = random.choice([f'O{i}' for i in range(1, option_num+1)])
             answers.append({"id": id_num, "Answer": answer})
         with open(output_file, "w", encoding='utf-8') as f:
             json.dump(answers, f, ensure_ascii=False, indent=4)
@@ -254,7 +261,7 @@ class GPT4o(BaselineModel):
                 raise e
 
     def test_qa(self, input_file, output_file, materials_folder):
-        with open(json_file, "r") as f:
+        with open(input_file, "r") as f:
             data = json.load(f)
         answers = []
         for item in tqdm(data):
@@ -272,21 +279,28 @@ class GPT4o(BaselineModel):
             
             old_material_path = item["materials"]
             material_path = []
-            for path in old_material_path:
-                material_path.append(os.path.join(materials_folder, path))
+            try:
+                if old_material_path:
+                    for path in old_material_path:
+                        material_path.append(os.path.join(materials_folder, path))
+                    if not os.path.isfile(material_path[0]):
+                        material_path = sort_files_by_number_in_name(material_path[0])
+                    image_exts = {'.jpg', '.jpeg', '.png', '.gif', '.bmp', '.webp', '.tiff', '.tif', '.heic'}
+                    video_exts = {'.mp4', '.avi', '.mov', '.mkv', '.flv', '.wmv', '.webm', '.mpeg', '.mpg'}
+                    if os.path.splitext(material_path[0])[1].lower() in image_exts:
+                        reply = self.chat_img(prompt, material_path)
+                    elif os.path.splitext(material_path[0])[1].lower() in video_exts:
+                        reply = self.chat_video(prompt, material_path)
+                else:
+                    reply = self.chat_img(prompt, [])
+                answer = extract_option(reply)
+            except Exception as e:
+                print(f"Error processing item id {id_num}: {e}")
+                answer = None
 
-            if material_path:
-                if not os.path.isfile(material_path[0]):
-                    material_path = sort_files_by_number_in_name(material_path[0])
-                image_exts = {'.jpg', '.jpeg', '.png', '.gif', '.bmp', '.webp', '.tiff', '.tif', '.heic'}
-                video_exts = {'.mp4', '.avi', '.mov', '.mkv', '.flv', '.wmv', '.webm', '.mpeg', '.mpg'}
-                if os.path.splitext(material_path[0])[1].lower() in image_exts:
-                    reply = self.chat_img(prompt, material_path)
-                elif os.path.splitext(material_path[0])[1].lower() in video_exts:
-                    reply = self.chat_video(prompt, material_path)
-            else:
-                reply = self.chat_img(prompt, [])
-            answer = extract_option(reply)
+            # if the model does not return a valid option, randomly select one
+            if not answer:
+                answer = random.choice([f'O{i}' for i in range(1, option_num+1)])
             answers.append({"id": id_num, "Answer": answer})
         with open(output_file, "w", encoding='utf-8') as f:
             json.dump(answers, f, ensure_ascii=False, indent=4)
