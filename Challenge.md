@@ -1,7 +1,7 @@
 # SoccerNet Challenge 2026 - VQA (Visual Question Answering)
 
 ## 🎯 Challenge Overview
-We are proud to announce the [**SoccerNet Challenge 2026 - Video Question Answering (VQA)**](https://www.soccer-net.org/challenges/2026), building upon our previous work presented in ⚽️"***Multi-Agent System for Comprehensive Soccer Understanding***"⚽️ (MM'25). This challenge aims to push the boundaries of multimodal reasoning in multi-modal soccer understanding through a comprehensive question-answering framework. Here is the challenge page, more details about the SoccerAgent project could be found [here](https://github.com/jyrao/SoccerAgent/blob/main/Challenge.md). 
+We are proud to announce the [**SoccerNet Challenge 2026 - Visual Question Answering (VQA)**](https://www.soccer-net.org/challenges/2026), building upon our previous work presented in ⚽️"***Multi-Agent System for Comprehensive Soccer Understanding***"⚽️ (MM'25). This challenge aims to push the boundaries of multimodal reasoning in multi-modal soccer understanding through a comprehensive question-answering framework. Here is the challenge page, more details about the SoccerAgent project could be found [here](https://github.com/jyrao/SoccerAgent/blob/main/Challenge.md). 
 
 More details could be found at:
 
