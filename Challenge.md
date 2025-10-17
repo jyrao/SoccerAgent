@@ -6,7 +6,7 @@ We are proud to announce the [**SoccerNet Challenge 2026 - Visual Question Answe
 More details could be found at:
 
 - 📑 Paper Relevant Links: [Paper](https://arxiv.org/abs/2505.03735) ⋅ [WebPage](https://jyrao.github.io/SoccerAgent) ⋅ [Benchmark](https://huggingface.co/datasets/Homie0609/SoccerBench) ⋅ [Database](https://huggingface.co/datasets/Homie0609/SoccerWiki) 
-- 🏆 2026 SoccerNet Challenge - VQA: [Benchmark (Test & Challenge)](https://huggingface.co/datasets/Homie0609/2026SoccerNetChallenge-VQA) ⋅ [Eval (Test)](https://www.codabench.org/competitions/11086/#/results-tab) ⋅ [Eval (Challenge)](https://www.codabench.org/competitions/11087/)
+- 🏆 2026 SoccerNet Challenge - VQA: [Benchmark (Test & Challenge)](https://huggingface.co/datasets/SoccerNet/SN-VQA-2026) ⋅ [Eval (Test)](https://www.codabench.org/competitions/11086/#/results-tab) ⋅ [Eval (Challenge)](https://www.codabench.org/competitions/11087/)
 
 **No.1 in Challenge Phase**: **$1,000**💰 *(Sponsored by [**KNQ Technology**](https://knq.ai/))*
 
@@ -18,7 +18,6 @@ Participants will tackle close-ended questions from **14** distinct *(13 from So
 #### Text-based QA Tasks
 - **Background Knowledge QA**: Questions about players, teams, referees, and venues
 - **Match Situation QA**: Queries about specific match events and statistics
-- **Commentary Relevant QA**: Questions combining player background and match commentary
 
 #### Image-based QA Tasks  
 - **Camera Status Classification**: Identifying camera positions in broadcast images
@@ -32,6 +31,7 @@ Participants will tackle close-ended questions from **14** distinct *(13 from So
 - **Replay Grounding**: Identifying which action is being replayed
 - **Action Classification**: Recognizing soccer-specific actions and events
 - **Commentary Generation**: Producing textual descriptions from video content
+- **Commentary Relevant QA**: Questions combining player background and match commentary
 - **Jersey Color Relevant QA**: Questions incorporating jersey color information
 - **Multi-view Foul Recognition**: Analyzing fouls from multiple camera angles
 
@@ -56,9 +56,12 @@ $$
 
 ## 🛠️ Dataset Specifications
 
-#### Train/Validation Dataset
-From our previous work, we provide a benchmark [**SoccerBench**](https://huggingface.co/datasets/Homie0609/SoccerBench), which can be used for train set and validation set, it is the largest multimodal soccer benchmark featuring:
-- **Around 10k QA pairs** across 13 tasks
+#### Train/Validation/Test/Challenge Dataset
+From the challenge dataset page [here](https://huggingface.co/datasets/SoccerNet/SN-VQA-2026), you can find the  train/valid/test/challenge set of this challenge. With each `.zip` file contains a `.json` file and a `materials` folder, where `.json` file contains the questions (`challenge.zip` has no answers) and `materials` folder contains the required picture/videos in the questions. 
+
+Such train.zip and valid.zip is split from the benchmark [SoccerBench](https://huggingface.co/datasets/Homie0609/SoccerBench), which is the largest multimodal soccer understanding QA benchmark introduced by our previous work of **SoccerAgent**. In the train/valid dataset, you could find the soccer understanding QA pairs featuring: 
+
+- **Around 10k QA pairs** across 14 tasks
 - **Balanced distribution** across modalities and difficulty levels
 - **Multi-choice format** with one correct answer and three distractors
 - **Professional annotations** from soccer experts
