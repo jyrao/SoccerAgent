@@ -123,7 +123,7 @@ After running the script, you'll get an output JSON file at the specified locati
 Details could be find in codabench page before, you need to zip a json file with the according format.
 ```
 submission.zip/
-└─── submission.json
+└─── metadata.json
 ```
 The json file format is shown as the following for all the questions:
 ```json:
